@@ -38,9 +38,9 @@ export default function GroupSection() {
         if (!groupAlreadyPicked.includes(groupIndex)) break;
       }
       groups[groupIndex].push(participant);
-      groupAlreadyPicked.push(groupIndex);
+      return groupAlreadyPicked.push(groupIndex);
     });
-    return groups;
+    return groups.sort();
   }
 
   return (
